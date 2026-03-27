@@ -1,5 +1,5 @@
 {
-  "name": "forms-react-native",
+  "name": "navegacion-componentes",
   "version": "1.0.0",
   "main": "expo-router/entry",
   "scripts": {
@@ -11,16 +11,33 @@
   },
   "dependencies": {
     "@react-native-vector-icons/material-design-icons": "^12.4.1",
+    "babel-preset-expo": "^55.0.11",
     "expo": "~54.0.33",
+    "expo-linking": "^55.0.7",
     "expo-router": "^6.0.23",
     "expo-status-bar": "~3.0.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-native": "0.81.5",
     "react-native-paper": "^5.15.0",
-    
+    "react-native-reanimated": "~4.1.1",
     "react-native-safe-area-context": "^5.7.0",
-    "react-native-web": "^0.21.0"
+    "react-native-web": "^0.21.0",
+    "react-native-worklets": "^0.5.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-native": "^5.4.0",
+    "@testing-library/react-native": "^13.3.0",
+    "jest-expo": "^48.0.0"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest-setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|@react-native|@react-navigation|@expo|expo-router)"
+    ]
   },
   "private": true
 }
